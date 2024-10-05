@@ -1,95 +1,100 @@
-<!DOCTYPE>
+<!Doctype>
 <html>
-    <head>
-        <meta charset="UTF-8"
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"
-        <title></title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js"></script>
-    </head>
-    <body>
-      <header>
-        <div class="container">
-          <h1>Matthew Kennedy</h1>
-        </div>
-      </header>
 
-      <nav>
-        <div class="container" id="site-links">
-            <ul>
-              <li><a href="#Featured Videos">Featured Videos</a></li>
-              <li><a href="#Featured Music">Featured Music</a></li>
-              <li><a href="#Contact Me">Contact Me</a></li>
-            </ul>
-        </div>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>matthewkennedyproductions.com</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
+</head>
 
-      <nav>
-         <div class="container" id="socials">
-          <ul>
-            <li><a href="#Instagram">Instagram</a></li>
-            <li><a href="#Facebook">Facebook</a></li>
-            <li><a href="#LinkedIn">LinkedIn</a></li>
-          </ul>
-        </div>
-      </nav>
+<body>
+  <header>
+    <div id="section" class="container">
+      <h1>Matthew Kennedy Productions</h1>
+    </div>
+  </header>
 
-      <section id="about" class="container">
-        <h2>About Me</h2>
-        <p>Bio goes here</p
-      </section>
+  <!--In-site links-->
+  <nav id="sitelinks">
+    <div class="container" id="site-links">
+      <ul>
+        <li><a href="#Featured Videos">Featured Videos</a></li>
+        <li><a href="#Featured Music">Featured Music</a></li>
+        <li><a href="#Contact Me">Contact Me</a></li>
+      </ul>
+    </div>
+  </nav>
 
-      <section id="videos" class="container">
-        <h2>Featured Videos</h2>
-        <div class="video-container">
-          <iframe id="YouTube video" src="https://www.youtube.com/embed/H0g9gxQPz88" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" allowfullscreen>
-          </<iframe>
-        </div>
-        
-        <div class="video">
-          <h3></h3>
-          <p></p>
-        </div>
-      </section>
+  <!--This is the bio section-->
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <p>My girlfriend's dating a minor.</p>
+  </section>
 
-      <section id="music" class="container">
-         <h2>Featured Music</h2>
-         <div class="original-track">
-             <h3>Song Title 1</h3>
-             <p></p>
-         </div>
-         <div class="original-track">
-             <h3>Song Title 2</h3>
-             <p></p>
-         </div>
-         <div class="original-track">
-             <h3>Song Title 3</h3>
-             <p></p>
-         </div>
-      </section>
-      
-      <section id="contact" class="container">
-         <h2>Contact Me</h2>
-         <form id="contact-form">
-             <label for="name">Full Name:</label>
-             <input type="text" id="name" name="name" required>
+  <!--This is for videos I've worked on-->
+  <section id="videos" class="container">
+    <h2>Featured Videos</h2>
+    <!--FBCH Service 8/18/24 11am-->
+    <div id="video-container" class="container">
+      <iframe id="fbch-service" src="://www.youtube.com/embed/H0g9gxQPz88" title="YouTube video player"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen>
+      </iframe>
+    </div>
+    <!--Kumba Village Video-->
+    <div id="kumba-video" class="container">
+      <iframe id="kumba" src="~/Desktop/Visual Media/Kumba Village Draft 92324 2052 (1).mov" title="Original Video"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen>
+      </iframe>
+    </div>
+  </section>
 
-             <label for="email">Email:</label>
-             <input type="email" id="email" name="email" required>
+  <!--This is for songs I want to be on my portfolio-->
+  <section id="music" class="container">
+    <h2>Featured Music</h2>
+    <div id="song-1" class="original-track">
+      <h3>Song Title 1</h3>
+      <p></p>
+    </div>
+    <div id="song-2" class="original-track">
+      <h3>Song Title 2</h3>
+      <p></p>
+    </div>
+    <div id="song-3" class="original-track">
+      <h3>Song Title 3</h3>
+      <p></p>
+    </div>
+  </section>
 
-             <label for="message">Message:</label>
-             <textarea id="message" name="message" required></textarea>
+  <div id="name-field" class="form-item fields name required">
+    <label class="title" for="name-field">
+      Name
+      <span class="required" aria-hidden="true">*</span>
+    </label>
 
-             <button type="submit" onclick="">Send</button>
-         </form>
-      </section>
+    <div class="field first-name">
+      <label class="caption">
+        <input class="field-element field-control" name="fname" x-autocompletetype="given-name" type="text"
+          spellcheck="false" maxlength="40" data-title="First" aria-required="true" />
+        <span class="caption-text">First Name</span>
+      </label>
+    </div>
+    <div class="caption">
+      <label class="caption">
+        <input class="field-element field-control" name="lname" x-autocompletetype="surname" type="text"
+          spellcheck="true" maxlength="40" data-title="Last" aria-required="true" />
+        <span class="caption-text">Last Name</span>
+      </label>
+    </div>
 
-      <footer>
-          <div class="container">
-              <p>&copy; 2024 Matthew Kennedy Productions. All Rights Reserved.</p>
-          </div>
-      </footer>
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2024 Matthew Kennedy Productions. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+</body>
 
-      <script src="script.js"></script>
-    </body>
 </html>
