@@ -9,15 +9,23 @@ body h1 {
   color: white;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+header {
+  background-image: url('~/Pictures/Photos to Keep on Here/Me.jpg');
+  background-size: cover; /* Cover the entire header area */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent image repeat */
+  height: 200px; /* Set a height so that the image is visible */
+  display: flex; /* Flex to center content */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  color: white; /* Ensure text color contrasts with the background */
+  text-align: center; /* Center the text */
 }
 
-header {
-    padding: 60px 0;
-    text-align: center;
+/* Ensure the container does not affect the layout */
+#section.container {
+  width: 100%;
+  padding: 20px;
 }
 
 header h1 {
@@ -103,3 +111,45 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
+/* Start staggered video alignment */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.video-container {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+/* Left aligned iframe */
+.video-container.left {
+  flex-direction: row;
+}
+
+.video-container.left iframe {
+  margin-right: 20px;
+}
+
+/* Right aligned iframe */
+.video-container.right {
+  flex-direction: row-reverse;
+}
+
+.video-container.right iframe {
+  margin-left: 20px;
+}
+
+/* Styling for iframe to make it responsive */
+.video-container iframe {
+  width: 100%;
+  height: auto;
+  max-width: 560px;
+  aspect-ratio: 16/9;
+}
+/* End staggered video alignment*/
