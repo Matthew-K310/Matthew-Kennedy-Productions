@@ -153,3 +153,7 @@ footer {
   aspect-ratio: 16/9;
 }
 /* End staggered video alignment*/
+
+#section.contact {
+  margin: 10px;
+}
