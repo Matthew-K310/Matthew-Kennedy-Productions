@@ -1,8 +1,10 @@
 body {
-    font-family: Georgia, sans-serif;
-    margin: 0;
-    padding: 10;
-    background-color: black;
+  /* font-family: Georgia, sans-serif; */
+  /* or font-family: Arial, Helvetica, sans-serif; */
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 30px;
+  padding: 10;
+  background-color: black;
 }
 
 body h1 {
@@ -11,15 +13,15 @@ body h1 {
 
 header {
   background-image: url('~/Pictures/Photos to Keep on Here/Me.jpg');
-  background-size: cover; /* Cover the entire header area */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent image repeat */
-  height: 200px; /* Set a height so that the image is visible */
-  display: flex; /* Flex to center content */
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
-  color: white; /* Ensure text color contrasts with the background */
-  text-align: center; /* Center the text */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
 }
 
 /* Ensure the container does not affect the layout */
@@ -29,131 +31,177 @@ header {
 }
 
 header h1 {
-    margin: 0;
-    font-size: 34px;
-    color: rgba(255, 255, 255, 1.0);
+  margin: 0;
+  font-size: 34px;
+  color: rgba(255, 255, 255, 1.0);
 }
 
 
 header p {
-    font-size: 18px;
-    margin: 10px 0 0;
+  font-size: 18px;
+  margin: 10px 0 0;
 }
 
+/* In-site links formatting */
 nav {
-    background: black;
-    padding: 10px 0;
-    color: rgba(255, 255, 255, 1);
+  background: black;
+  padding: 10px 0;
+  color: rgba(255, 255, 255, 1);
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 10;
-    text-align: center;
-    color: white;
+  list-style: none;
+  padding: 0;
+  margin: 10;
+  text-align: center;
+  color: white;
+  font-size: 18px;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: rgba(255, 255, 255, 1);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-section {
-    color: white;
-}
-
-h2 {
-    border-bottom: 4px solid rgba(60, 110, 80, 1);
-    padding-bottom: 10px;
-}
-
-label {
-    margin: 10px 0 5px;
-}
-
-input,
-textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px;
-    border: none;
-    background: #333;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-button:hover {
-    background: #555;
-}
-
-#formMessage {
-    margin-top: 20px;
-    font-size: 16px;
-    color: green;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-/* Start staggered video alignment */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.video-container {
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-  padding: 10px;
-}
-
-/* Left aligned iframe */
-.video-container.left {
-  flex-direction: row;
-}
-
-.video-container.left iframe {
+  display: inline;
   margin-right: 20px;
 }
 
-/* Right aligned iframe */
-.video-container.right {
-  flex-direction: row-reverse;
+nav ul li a {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.video-container.right iframe {
-  margin-left: 20px;
+section {
+  color: white;
 }
 
-/* Styling for iframe to make it responsive */
-.video-container iframe {
-  width: 100%;
-  height: auto;
-  max-width: 560px;
-  aspect-ratio: 16/9;
+h2 {
+  border-bottom: 4px solid rgba(60, 110, 80, 1);
+  padding-bottom: 10px;
 }
-/* End staggered video alignment*/
 
-#section.contact {
-  margin: 10px;
+label {
+  margin: 10px 0 5px;
+}
+
+/* margin spacing for header items */
+#about p {
+  margin-bottom: 50px;
+}
+
+#contact h2 {
+  margin-top: 50px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background: #555;
+}
+
+#formMessage {
+  margin-top: 20px;
+  font-size: 18px;
+  color: green;
+}
+
+footer {
+  /* background: #333; */
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+footer p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* Video and Text Box Flex Layout */
+.video-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.5rem;
+  padding-top: 30px;
+}
+
+.video-container {
+  flex: 1.5;
+  max-width: 100%;
+  max-height: 75%;
+  aspect-ratio: 16 / 9;
+  /* Ensures consistent video proportions */
+}
+
+/* Video desc */
+.text-box {
+  flex: 1;
+  padding: 1.5rem;
+  border-radius: 4px;
+  color: #f1f1f1;
+}
+
+.text-box h3 {
+  font-size: 22px;
+  color: black;
+}
+
+.text-box p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* end video desc */
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .video-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .video-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .text-box {
+    width: 90%;
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-item {
+    padding: 1rem;
+  }
+
+  .text-box {
+    font-size: 16px;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-box {
+    font-size: 14px;
+    padding: 0.5rem;
+  }
 }
