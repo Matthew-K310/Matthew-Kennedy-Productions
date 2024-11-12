@@ -1,3 +1,1 @@
-function greet() {
-    alert('hi');
-}
+
