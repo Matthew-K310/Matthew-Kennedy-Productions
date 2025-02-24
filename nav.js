@@ -1,6 +1,6 @@
 class SpecialNav extends HTMLElement {
-        connectedCallback() {
-                this.innerHTML = `
+	connectedCallback() {
+		this.innerHTML = `
   <nav>
 	  <style type="text/css">
 /* Nav bar styling */
@@ -111,7 +111,7 @@ class SpecialNav extends HTMLElement {
     </div>
   </nav>
 `
-        }
+	}
 }
 
 customElements.define('special-nav', SpecialNav)
