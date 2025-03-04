@@ -1,15 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll(".nav_link a");
-  const currentPath = window.location.pathname;
-
-  // Loop through navigation links and add 'active' class if it matches the current URL
-  links.forEach((link) => {
-    if (link.getAttribute("href") === currentPath) {
-      link.classList.add("active");
-    }
-  });
-});
-
 class SpecialNav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
@@ -37,6 +25,7 @@ class SpecialNav extends HTMLElement {
     nav ul li {
         display: flex;
         align-items: center;
+        color: rgb(180, 180, 180);
         gap: 2px;
         white-space: nowrap;
     }
@@ -45,26 +34,38 @@ class SpecialNav extends HTMLElement {
     nav ul li a {
         font-size: 1.2rem;
         font-weight: normal;
-        color: white;
+        color: rgb(170, 170, 170);
         text-decoration: none;
         font-weight: bold;
     }
 
     /* Icon styling */
+    /*nav ul li svg {*/
+    /*    width: 24px;*/
+    /*    height: 24px;*/
+    /*    max-width: 24px;*/
+    /*    max-height: 24px;*/
+    /*    margin-left: 5px;*/
+    /*    margin-right: 1px;*/
+    /*}*/
+
     nav ul li svg {
-        width: 24px;
-        height: 24px;
-        max-width: 24px;
-        max-height: 24px;
-        margin-left: 5px;
-        margin-right: 1px;
-    }
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    margin: 0; /* Prevent any unnecessary shifts */
+    padding-left: 3px;
+    padding-right: 3px;
+    display: block; /* Ensures proper scaling */
+}
+
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
         nav ul li svg {
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
         }
 
         nav ul li a {
@@ -72,12 +73,16 @@ class SpecialNav extends HTMLElement {
         }
 
         .nav_link {
-            gap: 2px;
+            gap: 5px;
         }
 
         nav ul {
             gap: 5px; 
         }
+
+	nav ul li {
+	    align-items: center;
+	    }
     }
 
     /* Section and header styling */
@@ -171,16 +176,16 @@ class SpecialNav extends HTMLElement {
 }
 
 /* Hover effect */
-.dropdown-menu li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
+/*.dropdown-menu li a:hover {*/
+/*    background-color: rgba(255, 255, 255, 0.2);*/
+/*}*/
 
     </style>
     <div class="nav-container">
        <ul>
         <!-- Home Navigation Button -->
         <li class="nav_link">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="36" height="36" stroke-width="2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
                 <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
                 <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
                 <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
@@ -205,7 +210,7 @@ class SpecialNav extends HTMLElement {
 
         <!-- About Navigation Button -->
         <li class="nav_link">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="36" height="36" stroke-width="2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
                 <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
                 <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
             </svg>
@@ -214,7 +219,7 @@ class SpecialNav extends HTMLElement {
 
         <!-- Contact Navigation Button -->
         <li class="nav_link">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="36" height="36" stroke-width="2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
                 <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
                 <path d="M3 7l9 6l9 -6"></path>
             </svg>
@@ -228,6 +233,18 @@ class SpecialNav extends HTMLElement {
 }
 
 customElements.define("special-nav", SpecialNav);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".nav_link a");
+  const currentPath = window.location.pathname;
+
+  // Loop through navigation links and add 'active' class if it matches the current URL
+  links.forEach((link) => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   const mediaLink = document.getElementById("medialink");

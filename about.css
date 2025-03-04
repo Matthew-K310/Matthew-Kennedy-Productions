@@ -55,18 +55,30 @@ header div {
   color: #3c6e50;
 }
 
-.video-container {
-  display: flex;
-  align-items: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  justify-content: center;
+.about-text {
+  max-width: 670px; /* Prevents overly wide text blocks */
+  margin: 0 auto; /* Centers the text */
+  padding: 10px;
+  font-size: 1.2rem; /* Default size for larger screens */
+  line-height: 1.6; /* Improves readability */
+  color: white;
 }
 
-.sample-text {
-  margin-left: 200px;
-  margin-right: 200px;
-  font-size: 18px;
+/* Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+  .about-text {
+    font-size: 1rem; /* Slightly smaller text on tablets */
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text {
+    font-size: 0.9rem; /* Reduce font size for phones */
+    padding: 25px;
+    line-height: 1.5;
+    text-align: justify; /* Makes text more readable */
+  }
 }
 
 .footer {
