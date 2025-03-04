@@ -90,35 +90,49 @@ class SpecialNav extends HTMLElement {
         padding-bottom: 10px;
     }
 
-    /* Fix underline effect */
-    .nav_link a {
-        position: relative;
-        display: inline-block;
-        color: white;
-        text-decoration: none;
+    /* Navigation link effects */
+    .nav_link.active {
+        color: white !important;
     }
-    
-    /* Underline Effect */
-    .nav_link a::after {
-        content: '';
+
+    .nav_link.active::after {
+        opacity: 1;
+    }
+
+    .nav_link {
+        display: flex;
+        /*color: rgb(76, 76, 76);*/
+        /*color: #181A1B;*/
+        align-items: center;
+        gap: 5px;
+        position: relative;
+    }
+
+    .nav_link::after {
+        /*content: '';*/
         height: 2px;
-        width: 0%; /* Start with no width */
-        background-color: white; /* Ensure the underline color is white */
+        width: 100%;
+        background-color: white;
+	/*color: white;*/
         position: absolute;
-        left: 50%;
+        left: 0;
         bottom: -6px;
         opacity: 0;
-        transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
-        transform: translateX(-50%);
+        transition: all 0.2s;
+        pointer-events: none;
     }
-    
-    /* Hover Effect */
-.nav_link a:hover::after,
-.nav_link a:focus::after {
-    width: 100%; /* Expand fully */
-    opacity: 1;
-    background-color: white; /* Keep the underline color white */
-}
+
+    .nav_link:hover::after,
+    .nav_link:focus::after {
+        width: 100%; /* Expands fully */
+        opacity: 1; /* Becomes visible */
+    }
+
+
+    /*.nav_link:hover,*/
+    /*.nav_link:focus {*/
+    /*    color: white;*/
+    /*}*/
 
     </style>
     <div class="nav-container">
