@@ -42,7 +42,7 @@ header div {
 
 .nav-line {
   width: 50%;
-  color: #3c6e50;
+  color: #284936;
 }
 
 .title {
@@ -52,7 +52,7 @@ header div {
 
 .title-line {
   width: 75%;
-  color: #3c6e50;
+  color: #284936;
 }
 
 /* Centering the form section */
@@ -82,7 +82,7 @@ input[type="text"] {
 
 /* Input focus effect */
 input[type="text"]:focus {
-  border-color: #3c6e50; /* Changes border color when focused */
+  border-color: #284936; /* Changes border color when focused */
   /*box-shadow: 0 0 8px rgba(76, 175, 80, 0.7);*/
 }
 
@@ -121,13 +121,13 @@ input[type="text"]:focus {
 
 /* Checked state */
 .radio-group input[type="radio"]:checked {
-  background-color: #3c6e50; /* Green background when checked */
+  background-color: #284936; /* Green background when checked */
   /*border-color: white;*/
 }
 
 /* Hover effect */
 .radio-group input[type="radio"]:hover {
-  background-color: #3c6e50;
+  background-color: #284936;
   border-color: white;
 }
 

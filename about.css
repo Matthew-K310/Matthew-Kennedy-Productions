@@ -42,7 +42,7 @@ header div {
 
 .nav-line {
   width: 50%;
-  color: #3c6e50;
+  color: #284936;
 }
 
 .title {
@@ -52,7 +52,7 @@ header div {
 
 .title-line {
   width: 75%;
-  color: #3c6e50;
+  color: #284936;
 }
 
 .about-text {
@@ -75,7 +75,7 @@ header div {
 @media (max-width: 480px) {
   .about-text {
     font-size: 0.9rem; /* Reduce font size for phones */
-    padding: 25px;
+    padding: 20px;
     line-height: 1.5;
     text-align: justify; /* Makes text more readable */
   }
