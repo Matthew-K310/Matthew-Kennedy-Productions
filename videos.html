@@ -1,30 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial scale=1" />
+    <title>https://matthew-kennedy.com</title>
+    <link rel="icon" href="assets/mkp-icon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="videos.css" />
+    <!--<link rel="stylesheet" href="styles.css" />-->
+    <script src="script.js"></script>
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial scale=1" />
-	<title>https://matthew-kennedy.com</title>
-	<link rel="icon" href="assets/mkp-icon.svg" type="image/x-icon" />
-	<link rel="stylesheet" href="styles.css" />
-	<script src="script.js"></script>
-</head>
+  <body>
+    <special-header></special-header>
 
-<body>
-	<special-header></special-header>
+    <!--Nav links-->
+    <special-nav></special-nav>
 
-	<!--Nav links-->
-	<special-nav></special-nav>
+    <hr class="nav-line" />
 
-	<hr class="nav-line">
+    <h1 class="title">Featured Videos</h1>
 
-	<div class="sample-text">
-	</div>
+    <hr class="title-line" />
 
-	<special-footer></special-footer>
+    <div class="video-container">
+      <iframe
+        width="840"
+        height="472.5"
+        src="https://www.youtube.com/embed/dkpcOC65Djs?si=5fG-Qlm0y2BeQ9vu"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
 
-	<script src="header.js"></script>
-	<script src="nav.js"></script>
-</body>
+    <div class="video-container">
+      <iframe
+        width="840"
+        height="472.5"
+        src="https://www.youtube.com/embed/N4QGozO0jNs?si=-VKDg6lnKDSWa9Fv"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
 
+    <div class="sample-text"></div>
+
+    <special-footer></special-footer>
+
+    <script src="header.js"></script>
+    <script src="nav.js"></script>
+  </body>
 </html>

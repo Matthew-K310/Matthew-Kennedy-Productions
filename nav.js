@@ -1,18 +1,18 @@
-document.addEventListener("DOMContentLoaded", function() {
-	const links = document.querySelectorAll(".nav_link a");
-	const currentPath = window.location.pathname;
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".nav_link a");
+  const currentPath = window.location.pathname;
 
-	// Loop through navigation links and add 'active' class if it matches the current URL
-	links.forEach(link => {
-		if (link.getAttribute("href") === currentPath) {
-			link.classList.add("active");
-		}
-	});
+  // Loop through navigation links and add 'active' class if it matches the current URL
+  links.forEach((link) => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
 });
 
 class SpecialNav extends HTMLElement {
-	connectedCallback() {
-		this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
 <nav>
     <style>
     /* Navigation styling */
@@ -120,6 +120,61 @@ class SpecialNav extends HTMLElement {
     background-color: white; /* Keep the underline color white */
 }
 
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    border-radius: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0;
+    display: none; /* Initially hidden */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+/* Dropdown Menu Items */
+.dropdown-menu li {
+    padding: 8px 12px;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    padding: 8px 12px;
+}
+
+
+/* Make dropdown button clickable */
+.dropdown > a {
+    cursor: pointer;
+}
+
+/*/* show dropdown on hover */*/
+/*.dropdown:hover .dropdown-menu {*/
+/*    display: block;*/
+/*}*/
+
+/* show dropdown on click */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Hover effect */
+.dropdown-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
     </style>
     <div class="nav-container">
        <ul>
@@ -134,14 +189,19 @@ class SpecialNav extends HTMLElement {
         </li>
 
         <!-- Media Navigation Button -->
-        <li class="nav_link">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-                <path d="M4 13m0 2a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2z"></path>
-                <path d="M15 13m0 2a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2z"></path>
-                <path d="M4 15v-3a8 8 0 0 1 16 0v3"></path>
-            </svg>
-            <a id="medialink" class="nav_link">Media</a>
-        </li>
+<li class="nav_link dropdown">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+        <path d="M4 13m0 2a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2z"></path>
+        <path d="M15 13m0 2a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2z"></path>
+        <path d="M4 15v-3a8 8 0 0 1 16 0v3"></path>
+    </svg>
+    <a id="medialink" class="nav_link">Media ▼</a>
+    
+    <ul class="dropdown-menu">
+        <li><a href="videos.html">Featured Videos</a></li>
+        <li><a href="music.html">Featured Music</a></li>
+    </ul>
+</li>
 
         <!-- About Navigation Button -->
         <li class="nav_link">
@@ -164,7 +224,25 @@ class SpecialNav extends HTMLElement {
     </div>
 </nav>
 `;
-	}
+  }
 }
 
-customElements.define('special-nav', SpecialNav);
+customElements.define("special-nav", SpecialNav);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const mediaLink = document.getElementById("medialink");
+  const dropdownMenu = mediaLink.nextElementSibling;
+
+  mediaLink.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default link action
+    dropdownMenu.style.display =
+      dropdownMenu.style.display === "block" ? "none" : "block";
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", function (event) {
+    if (!mediaLink.parentElement.contains(event.target)) {
+      dropdownMenu.style.display = "none";
+    }
+  });
+});

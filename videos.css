@@ -54,6 +54,14 @@ header div {
   color: #3c6e50;
 }
 
+.video-container {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  justify-content: center;
+}
+
 .sample-text {
   margin-left: 200px;
   margin-right: 200px;
