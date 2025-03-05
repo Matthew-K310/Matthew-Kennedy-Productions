@@ -56,10 +56,33 @@ header div {
 
 .video-container {
   display: flex;
-  align-items: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  justify-content: center;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically if needed */
+  width: 100%; /* Make it fluid */
+  max-width: 840px; /* Prevents excessive stretching */
+  margin: auto; /* Centers the container */
+  padding: 20px 20px; /* Default padding */
+}
+
+.video-container iframe {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9; /* Ensures correct aspect ratio */
+  border: none; /* Optional: Removes border */
+}
+
+/* Add larger side padding for mobile */
+@media (max-width: 768px) {
+  .video-container {
+    padding: 10px 10px; /* Increase left/right padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container {
+    padding: 10px 10px; /* Even larger padding for smaller screens */
+  }
 }
 
 .sample-text {
