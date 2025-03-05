@@ -57,10 +57,75 @@ header div {
   color: white;
 }
 
-.sample-text {
-  margin-left: 200px;
-  margin-right: 200px;
+/* Audio Player Container */
+.audio-container {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: #181818;
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Audio Element Styling */
+#custom-audio {
+  width: 100%;
+  background: none;
+  border-radius: 12px;
+  filter: brightness(1.2);
+}
+
+audio::-webkit-media-controls-panel {
+  background: #222;
+  color: white;
+  border-radius: 12px;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button {
+  filter: brightness(1.5);
+}
+
+audio::-webkit-media-controls-timeline {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: white;
+}
+
+audio::-webkit-media-controls-volume-slider {
+  background: white;
+  border-radius: 10px;
+}
+
+/* Track Info */
+.track-info {
+  text-align: center;
+  color: white;
+  margin-top: 12px;
+}
+
+.track-info h3 {
   font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.track-info p {
+  font-size: 14px;
+  margin: 3px 0 0;
+  opacity: 0.7;
 }
 
 .footer {
