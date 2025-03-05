@@ -4,7 +4,8 @@ body {
   /*font-family: Arial, Helvetica, sans-serif;*/
   /*margin: 30px;*/
   /*padding: 10;*/
-  background-color: #000000;
+  /*background-color: #000000;*/
+  background-color: #0f0f0f;
   color: white;
 }
 
@@ -41,7 +42,8 @@ header div {
 
 .nav-line {
   width: 50%;
-  color: #284936;
+  /*color: #284936;*/
+  color: white;
 }
 
 .title {
@@ -51,7 +53,8 @@ header div {
 
 .title-line {
   width: 75%;
-  color: #284936;
+  /*color: #284936;*/
+  color: white;
 }
 
 .sample-text {
