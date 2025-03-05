@@ -54,41 +54,92 @@ header div {
   color: #284936;
 }
 
+.subheading {
+  padding-top: 15px;
+  margin: 10px;
+  text-align: center;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+/* PHOTO GRID */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  gap: 10px;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.photo-container {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3; /* Keeps images proportional */
+}
+
+.photo-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* MOBILE STYLES (2 columns per row on mobile) */
+@media (max-width: 768px) {
+  .photo-grid {
+    /*grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    grid-template-columns: repeat(1, 1fr); /* 2 columns on mobile */
+    gap: 5px;
+  }
+
+  .photo-container {
+    aspect-ratio: 16 / 9; /* Adjust for better fit */
+  }
+}
+
+/* VIDEO GRID */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .video-container {
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically if needed */
-  width: 100%; /* Make it fluid */
-  max-width: 840px; /* Prevents excessive stretching */
-  margin: auto; /* Centers the container */
-  padding: 20px 20px; /* Default padding */
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Maintain video aspect ratio */
 }
 
 .video-container iframe {
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9; /* Ensures correct aspect ratio */
-  border: none; /* Optional: Removes border */
+  height: 100%;
+  border: none;
 }
 
-/* Add larger side padding for mobile */
+/* MOBILE STYLES */
 @media (max-width: 768px) {
-  .video-container {
-    padding: 10px 10px; /* Increase left/right padding */
+  .photo-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(150px, 1fr)
+    ); /* Smaller columns */
+    gap: 5px;
   }
-}
 
-@media (max-width: 480px) {
-  .video-container {
-    padding: 10px 10px; /* Even larger padding for smaller screens */
+  .photo-container {
+    aspect-ratio: 16 / 9; /* Adjust for better fit */
   }
-}
 
-.sample-text {
-  margin-left: 200px;
-  margin-right: 200px;
-  font-size: 18px;
+  .video-grid {
+    grid-template-columns: 1fr; /* Single-column layout */
+    padding: 10px;
+  }
+
+  .video-container {
+    aspect-ratio: 16 / 9;
+  }
 }
 
 .footer {

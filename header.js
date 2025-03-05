@@ -10,7 +10,7 @@ class SpecialHeader extends HTMLElement {
 class SpecialFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-<div class="footer" style="display: flex; font-size: 12px; align-items: center; padding-top: 10px; padding-bottom: 10px; margin: auto; width: auto; justify-content: center; text-align: center;">
+<div class="footer" style="display: flex; font-size: 12px; align-items: center; padding-top: 30px; padding-bottom: 10px; margin: auto; width: auto; justify-content: center; text-align: center;">
       <p>&copy; 2025 Matthew Kennedy Productions. All Rights Reserved.</p>
     </div>
 

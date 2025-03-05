@@ -34,20 +34,9 @@ class SpecialNav extends HTMLElement {
     nav ul li a {
         font-size: 1.2rem;
         font-weight: normal;
-        /*color: rgb(170, 170, 170);*/
         text-decoration: none;
         font-weight: bold;
     }
-
-    /* Icon styling */
-    /*nav ul li svg {*/
-    /*    width: 24px;*/
-    /*    height: 24px;*/
-    /*    max-width: 24px;*/
-    /*    max-height: 24px;*/
-    /*    margin-left: 5px;*/
-    /*    margin-right: 1px;*/
-    /*}*/
 
     nav ul li svg {
     width: 24px;
@@ -80,9 +69,9 @@ class SpecialNav extends HTMLElement {
             gap: 5px; 
         }
 
-	nav ul li {
-	    align-items: center;
-	    }
+        nav ul li {
+            align-items: center;
+        }
     }
 
     /* Section and header styling */
@@ -108,8 +97,7 @@ class SpecialNav extends HTMLElement {
         content: '';
         height: 2px;
         width: 0%; /* Start with no width */
-        background-color: white; /* Ensure the underline color is white */
-	color: white;
+        background-color: #174F1D; /* Ensure the underline color is white */
         position: absolute;
         left: 50%;
         bottom: -6px;
@@ -118,68 +106,64 @@ class SpecialNav extends HTMLElement {
         transform: translateX(-50%);
     }
     
+    /* Underline Active Navigation Link */
+    .nav_link a.active {
+      text-decoration: underline;
+      color: #174F1D; /* Active link color */
+      background-color: #174F1D
+    }
+
     /* Hover Effect */
-.nav_link a:hover::after,
-.nav_link a:focus::after {
-    width: 100%; /* Expand fully */
-    opacity: 1;
-    background-color: white; /* Keep the underline color white */
-}
+    .nav_link a:hover::after,
+    .nav_link a:focus::after {
+        width: 100%; /* Expand fully */
+        opacity: 1;
+        background-color: #174F1D; /* Keep the underline color white */
+    }
 
-/* Dropdown Container */
-.dropdown {
-    position: relative;
-}
+    /* Dropdown Container */
+    .dropdown {
+        position: relative;
+    }
 
-/* Dropdown Menu */
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: black;
-    border-radius: 5px;
-    list-style: none;
-    padding: 0;
-    margin: 5px 0 0;
-    display: none; /* Initially hidden */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    z-index: 10;
-}
+    /* Dropdown Menu */
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: black;
+        border-radius: 5px;
+        list-style: none;
+        padding: 0;
+        margin: 5px 0 0;
+        display: none; /* Initially hidden */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        z-index: 10;
+    }
 
-/* Dropdown Menu Items */
-.dropdown-menu li {
-    padding: 8px 12px;
-    white-space: nowrap;
-}
+    /* Dropdown Menu Items */
+    .dropdown-menu li {
+        padding: 8px 12px;
+        white-space: nowrap;
+    }
 
-.dropdown-menu li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    display: block;
-    padding: 8px 12px;
-}
+    .dropdown-menu li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        display: block;
+        padding: 8px 12px;
+    }
 
+    /* Make dropdown button clickable */
+    .dropdown > a {
+        cursor: pointer;
+    }
 
-/* Make dropdown button clickable */
-.dropdown > a {
-    cursor: pointer;
-}
-
-/*/* show dropdown on hover */*/
-/*.dropdown:hover .dropdown-menu {*/
-/*    display: block;*/
-/*}*/
-
-/* show dropdown on click */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* Hover effect */
-/*.dropdown-menu li a:hover {*/
-/*    background-color: rgba(255, 255, 255, 0.2);*/
-/*}*/
+    /* Show dropdown on click */
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
 
     </style>
     <div class="nav-container">
@@ -195,19 +179,19 @@ class SpecialNav extends HTMLElement {
         </li>
 
         <!-- Media Navigation Button -->
-<li class="nav_link dropdown">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-        <path d="M4 13m0 2a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2z"></path>
-        <path d="M15 13m0 2a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2z"></path>
-        <path d="M4 15v-3a8 8 0 0 1 16 0v3"></path>
-    </svg>
-    <a id="medialink" class="nav_link">Media ▼</a>
-    
-    <ul class="dropdown-menu">
-        <li><a href="videos.html">Featured Videos</a></li>
-        <li><a href="music.html">Featured Music</a></li>
-    </ul>
-</li>
+        <li class="nav_link dropdown">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                <path d="M4 13m0 2a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2z"></path>
+                <path d="M15 13m0 2a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2z"></path>
+                <path d="M4 15v-3a8 8 0 0 1 16 0v3"></path>
+            </svg>
+            <a id="medialink" class="nav_link">Media ▼</a>
+            
+            <ul class="dropdown-menu">
+                <li><a href="videos.html">Featured Videos</a></li>
+                <li><a href="music.html">Featured Music</a></li>
+            </ul>
+        </li>
 
         <!-- About Navigation Button -->
         <li class="nav_link">
@@ -224,44 +208,25 @@ class SpecialNav extends HTMLElement {
                 <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
                 <path d="M3 7l9 6l9 -6"></path>
             </svg>
-            <!--<a id="contactlink" href="contact.html" class="nav_link">Contact</a>-->
             <a id="contactlink" href="mailto:matthewkennedyproductions@gmail.com" class="nav_link">Email</a>
         </li>
        </ul>
     </div>
 </nav>
 `;
+
+    // Handle Active Link Styling
+    const links = this.querySelectorAll(".nav_link a");
+    const currentPath = window.location.pathname.replace(/\/$/, ""); // Remove trailing slash for comparison
+
+    // Loop through navigation links and add 'active' class if it matches the current URL
+    links.forEach((link) => {
+      const linkPath = link.getAttribute("href").replace(/\/$/, ""); // Also remove trailing slash for comparison
+      if (linkPath === currentPath) {
+        link.classList.add("active");
+      }
+    });
   }
 }
 
 customElements.define("special-nav", SpecialNav);
-
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll(".nav_link a");
-  const currentPath = window.location.pathname;
-
-  // Loop through navigation links and add 'active' class if it matches the current URL
-  links.forEach((link) => {
-    if (link.getAttribute("href") === currentPath) {
-      link.classList.add("active");
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const mediaLink = document.getElementById("medialink");
-  const dropdownMenu = mediaLink.nextElementSibling;
-
-  mediaLink.addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent default link action
-    dropdownMenu.style.display =
-      dropdownMenu.style.display === "block" ? "none" : "block";
-  });
-
-  // Close dropdown when clicking outside
-  document.addEventListener("click", function (event) {
-    if (!mediaLink.parentElement.contains(event.target)) {
-      dropdownMenu.style.display = "none";
-    }
-  });
-});
