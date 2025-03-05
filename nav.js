@@ -34,7 +34,7 @@ class SpecialNav extends HTMLElement {
     nav ul li a {
         font-size: 1.2rem;
         font-weight: normal;
-        color: rgb(170, 170, 170);
+        /*color: rgb(170, 170, 170);*/
         text-decoration: none;
         font-weight: bold;
     }
@@ -109,6 +109,7 @@ class SpecialNav extends HTMLElement {
         height: 2px;
         width: 0%; /* Start with no width */
         background-color: white; /* Ensure the underline color is white */
+	color: white;
         position: absolute;
         left: 50%;
         bottom: -6px;
