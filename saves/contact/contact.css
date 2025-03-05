@@ -59,29 +59,51 @@ header div {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: white; /* Ensures text is visible on dark backgrounds */
+  color: white;
 }
 
-/* Style for input fields */
-input[type="text"] {
-  width: 80%; /* Makes input fields responsive */
-  max-width: 400px; /* Prevents them from becoming too wide */
-  padding: 12px;
-  margin: 8px 0;
-  border: 2px solid white;
+/* General styling for form inputs */
+.input-box {
+  width: 90%; /* Takes up most of the container width */
+  max-width: 800px; /* Prevents excessive width on larger screens */
+  min-width: 280px; /* Ensures usability on smaller devices */
+  padding: 15px;
+  margin: 5px auto; /* Centers the input fields */
+  border: 4px solid black;
   border-radius: 5px;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   font-size: 1rem;
-  text-align: center; /* Centers text inside input fields */
+  text-align: center;
   outline: none;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
+  display: block; /* Ensures full width for centering */
+}
+
+/* Textarea specific styles */
+textarea.input-box {
+  height: 120px; /* Provides enough space for typing */
+  resize: vertical; /* Allows resizing only vertically */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .input-box {
+    width: 90%; /* Slightly larger on smaller screens */
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-box {
+    width: 95%; /* Almost full width on very small devices */
+    max-width: 400px;
+  }
 }
 
 /* Input focus effect */
-input[type="text"]:focus {
-  border-color: #284936; /* Changes border color when focused */
-  /*box-shadow: 0 0 8px rgba(76, 175, 80, 0.7);*/
+.input-box:focus {
+  border-color: #284936; /* Changes border color on focus */
 }
 
 /* Styling the radio button group */
@@ -95,7 +117,7 @@ input[type="text"]:focus {
 /* Styling radio buttons */
 .radio-group label {
   display: flex;
-  align-items: center; /* Align the radio button and text */
+  align-items: center; /* Aligns the radio button and text */
   font-size: 1rem;
   color: white;
   cursor: pointer; /* Pointer cursor on hover */
@@ -114,13 +136,11 @@ input[type="text"]:focus {
   background-color: #f0f0f0;
   transition: all 0.3s ease-in-out;
   outline: none;
-  color: white;
 }
 
 /* Checked state */
 .radio-group input[type="radio"]:checked {
   background-color: #284936; /* Green background when checked */
-  /*border-color: white;*/
 }
 
 /* Hover effect */
@@ -135,10 +155,23 @@ input[type="text"]:focus {
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
 
-.sample-text {
-  margin-left: 200px;
-  margin-right: 200px;
-  font-size: 18px;
+/* Styling for the submit button */
+.button {
+  display: block;
+  width: 200px;
+  padding: 10px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #284936;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #3c6e50;
 }
 
 .footer {

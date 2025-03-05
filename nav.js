@@ -224,7 +224,8 @@ class SpecialNav extends HTMLElement {
                 <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
                 <path d="M3 7l9 6l9 -6"></path>
             </svg>
-            <a id="contactlink" href="contact.html" class="nav_link">Contact</a>
+            <!--<a id="contactlink" href="contact.html" class="nav_link">Contact</a>-->
+            <a id="contactlink" href="mailto:matthewkennedyproductions@gmail.com" class="nav_link">Email</a>
         </li>
        </ul>
     </div>
