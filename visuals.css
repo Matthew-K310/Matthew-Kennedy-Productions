@@ -5,6 +5,7 @@ body {
   /*margin: 30px;*/
   /*padding: 10;*/
   /*background-color: #000000;*/
+  font-family: "JetBrains Mono", monospace;
   background-color: #0f0f0f;
   color: white;
 }
@@ -68,9 +69,10 @@ header div {
 /* PHOTO GRID */
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  /*grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  grid-template-columns: repeat(2, 1fr); /* 3 columns on desktop */
   gap: 10px;
-  max-width: 1250px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 10px;
 }
@@ -87,17 +89,17 @@ header div {
   border-radius: 5px; /* Optional: Adds rounded corners */
 }
 
-/* MOBILE STYLES (2 columns per row on mobile) */
+/* Mobile Styling for Images */
 @media (max-width: 768px) {
   .photo-grid {
-    /*grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-    grid-template-columns: repeat(1, 1fr); /* 2 columns on mobile */
+    grid-template-columns: 1fr; /* Single column on mobile */
     gap: 5px;
   }
 
   .photo-container {
-    aspect-ratio: auto; /* Allow natural proportions */
+    width: 100%;
     height: auto;
+    aspect-ratio: auto; /* Maintain natural proportions */
   }
 }
 
@@ -125,10 +127,11 @@ header div {
 /* MOBILE STYLES */
 @media (max-width: 768px) {
   .photo-grid {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(150px, 1fr)
-    ); /* Smaller columns */
+    /*grid-template-columns: repeat(*/
+    /*  auto-fit,*/
+    /*  minmax(150px, 1fr)*/
+    /*); /* Smaller columns */
+    grid-template-columns: 1fr; /* Single column on mobile */
     gap: 5px;
   }
 

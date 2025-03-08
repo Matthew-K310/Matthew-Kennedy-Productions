@@ -5,6 +5,7 @@ body {
   /*margin: 30px;*/
   /*padding: 10;*/
   /*background-color: #000000;*/
+  font-family: "JetBrains Mono", monospace;
   background-color: #0f0f0f;
   color: white;
 }
