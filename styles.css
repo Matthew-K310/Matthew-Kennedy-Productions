@@ -1,13 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap");
 
 body {
-  /*font-family: Arial, Helvetica, sans-serif;*/
-  /*margin: 30px;*/
-  /*padding: 10;*/
-  /*background-color: #000000;*/
   font-family: "JetBrains Mono", monospace;
   background-color: #0f0f0f;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
 body h1 {
@@ -20,20 +18,15 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  /*background-color: #907AA9;*/
-  /*height: 150px;*/
   height: 200px;
   width: 80%;
   margin: auto;
-  text-align: center;
   padding: 15px 0;
   padding-bottom: 30px;
-  /* Adds spacing above and below the image */
 }
 
 header img {
   height: 110%;
-  /* Adjust size as needed */
   width: auto;
 }
 
@@ -43,7 +36,6 @@ header div {
 
 .nav-line {
   width: 50%;
-  /*color: #284936;*/
   color: white;
 }
 
@@ -54,7 +46,6 @@ header div {
 
 .title-line {
   width: 75%;
-  /*color: #284936;*/
   color: white;
 }
 
@@ -75,31 +66,30 @@ header div {
   text-align: center;
 }
 
-/** {*/
-/*  box-sizing: border-box;*/
-/*}*/
-
-.mySlides:first-child {
-  display: block;
-}
-
-.slide {
-  vertical-align: middle;
-  /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
+.mySlides {
+  display: none;
 }
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 800px;
+  max-width: 100%;
+  width: 100%;
   position: relative;
   margin: auto;
   padding-top: 25px;
   padding-bottom: 25px;
+  overflow: hidden;
 }
 
-/* Caption text */
+/* Make slides responsive */
+.mySlides img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+/* Caption text (Centered link) */
 .link {
   display: flex;
   justify-content: center;
@@ -107,12 +97,13 @@ header div {
   color: #f2f2f2;
   font-size: 36px;
   position: absolute;
-  bottom: 50%; /* Moves it to the middle */
-  left: 50%; /* Moves it to the center */
-  transform: translate(-50%, 50%); /* Adjusts for exact centering */
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
   text-align: center;
   width: 100%;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 /* Number text (1/5 etc) */
@@ -125,6 +116,12 @@ header div {
 }
 
 /* The dots/bullets/indicators */
+.dots {
+  text-align: center;
+  position: relative;
+  bottom: 10px;
+}
+
 .dot {
   height: 15px;
   width: 15px;
@@ -143,11 +140,13 @@ header div {
 .fade {
   animation-name: fade;
   animation-duration: 2s;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
 }
 
 @keyframes fade {
   from {
-    opacity: 0.4;
+    opacity: 0.2;
   }
 
   to {
@@ -155,13 +154,35 @@ header div {
   }
 }
 
-/* On smaller screens, decrease text size */
+/* Make slideshow responsive */
 @media (max-width: 768px) {
   .slideshow-container {
     padding-left: 10px;
     padding-right: 10px;
   }
+
   .link {
     font-size: 24px;
+    bottom: 15%;
+  }
+
+  .numbertext {
+    font-size: 10px;
+  }
+}
+
+/* Ensure images & text scale properly on very small screens */
+@media (max-width: 480px) {
+  .slideshow-container {
+    padding: 5px;
+  }
+
+  .link {
+    font-size: 18px;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
   }
 }
