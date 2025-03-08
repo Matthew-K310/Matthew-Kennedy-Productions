@@ -32,7 +32,7 @@ class SpecialNav extends HTMLElement {
 
     /* Link styling */
     nav ul li a {
-        font-size: 1.2rem;
+        font-size: 18px;
         font-weight: normal;
         /*color: rgb(170, 170, 170);*/
         text-decoration: none;
@@ -69,7 +69,7 @@ class SpecialNav extends HTMLElement {
         }
 
         nav ul li a {
-            font-size: 0.75rem;
+            font-size: 12px;
         }
 
         .nav_link {
