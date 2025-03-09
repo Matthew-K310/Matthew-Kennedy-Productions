@@ -69,7 +69,7 @@ class SpecialNav extends HTMLElement {
         }
 
         nav ul li a {
-            font-size: 12px;
+            font-size: 14px;
         }
 
         .nav_link {
