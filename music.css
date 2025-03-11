@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+body {
+  /*font-family: Arial, Helvetica, sans-serif;*/
+  /*margin: 30px;*/
+  /*padding: 10;*/
+  /*background-color: #000000;*/
+  font-family: "JetBrains Mono", monospace;
+  background-color: #0f0f0f;
+  color: white;
+}
+
+body h1 {
+  color: white;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /*background-color: #907AA9;*/
+  /*height: 150px;*/
+  height: 200px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding: 15px 0;
+  padding-bottom: 30px;
+  /* Adds spacing above and below the image */
+}
+
+header img {
+  height: 110%;
+  /* Adjust size as needed */
+  width: auto;
+}
+
+header div {
+  margin-top: 10px;
+}
+
+.nav-line {
+  width: 50%;
+  /*color: #284936;*/
+  color: white;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+}
+
+.title-line {
+  width: 75%;
+  /*color: #284936;*/
+  color: white;
+}
+
+/* Audio Player Container */
+.audio-container {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: #181818;
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Audio Element Styling */
+#custom-audio {
+  width: 100%;
+  background: none;
+  border-radius: 12px;
+  filter: brightness(1.2);
+}
+
+audio::-webkit-media-controls-panel {
+  background: #222;
+  color: white;
+  border-radius: 12px;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button {
+  filter: brightness(1.5);
+}
+
+audio::-webkit-media-controls-timeline {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: white;
+}
+
+audio::-webkit-media-controls-volume-slider {
+  background: white;
+  border-radius: 10px;
+}
+
+/* Track Info */
+.track-info {
+  text-align: center;
+  color: white;
+  margin-top: 12px;
+}
+
+.track-info h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.track-info p {
+  font-size: 14px;
+  margin: 3px 0 0;
+  opacity: 0.7;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+}

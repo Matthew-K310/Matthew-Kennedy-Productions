@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+body {
+  /*font-family: Arial, Helvetica, sans-serif;*/
+  /*margin: 30px;*/
+  /*padding: 10;*/
+  /*background-color: #000000;*/
+  font-family: "JetBrains Mono", monospace;
+  background-color: #0f0f0f;
+  color: white;
+}
+
+body h1 {
+  color: white;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /*background-color: #907AA9;*/
+  /*height: 150px;*/
+  height: 200px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding: 15px 0;
+  padding-bottom: 30px;
+  /* Adds spacing above and below the image */
+}
+
+header img {
+  height: 110%;
+  /* Adjust size as needed */
+  width: auto;
+}
+
+header div {
+  margin-top: 10px;
+}
+
+.nav-line {
+  width: 50%;
+  /*color: #284936;*/
+  color: white;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+}
+
+.title-line {
+  width: 75%;
+  /*color: #284936;*/
+  color: white;
+}
+
+.about-text {
+  max-width: 670px; /* Prevents overly wide text blocks */
+  margin: 0 auto; /* Centers the text */
+  padding: 10px;
+  font-size: 1.2rem; /* Default size for larger screens */
+  line-height: 1.6; /* Improves readability */
+  color: white;
+}
+
+/* Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+  .about-text {
+    font-size: 1rem; /* Slightly smaller text on tablets */
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text {
+    font-size: 0.9rem; /* Reduce font size for phones */
+    padding: 20px;
+    line-height: 1.5;
+    text-align: justify; /* Makes text more readable */
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+}

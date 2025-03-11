@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+body {
+  /*margin: 30px;*/
+  /*padding: 10;*/
+  background-color: #000000;
+  color: white;
+}
+
+body h1 {
+  color: white;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /*background-color: #907AA9;*/
+  /*height: 150px;*/
+  height: 200px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding: 15px 0;
+  padding-bottom: 30px;
+  /* Adds spacing above and below the image */
+}
+
+header img {
+  height: 110%;
+  /* Adjust size as needed */
+  width: auto;
+}
+
+header div {
+  margin-top: 10px;
+}
+
+.nav-line {
+  width: 50%;
+  color: #284936;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+}
+
+.title-line {
+  width: 75%;
+  color: #284936;
+}
+
+/* Centering the form section */
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+/* General styling for form inputs */
+.input-box {
+  width: 90%; /* Takes up most of the container width */
+  max-width: 800px; /* Prevents excessive width on larger screens */
+  min-width: 280px; /* Ensures usability on smaller devices */
+  padding: 15px;
+  margin: 5px auto; /* Centers the input fields */
+  border: 4px solid black;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+  transition: 0.2s ease-in-out;
+  display: block; /* Ensures full width for centering */
+}
+
+/* Textarea specific styles */
+textarea.input-box {
+  height: 120px; /* Provides enough space for typing */
+  resize: vertical; /* Allows resizing only vertically */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .input-box {
+    width: 90%; /* Slightly larger on smaller screens */
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-box {
+    width: 95%; /* Almost full width on very small devices */
+    max-width: 400px;
+  }
+}
+
+/* Input focus effect */
+.input-box:focus {
+  border-color: #284936; /* Changes border color on focus */
+}
+
+/* Styling the radio button group */
+.radio-group {
+  display: flex;
+  flex-direction: column; /* Stack radio buttons vertically */
+  gap: 10px; /* Adds spacing between options */
+  align-items: flex-start; /* Align items to the left */
+}
+
+/* Styling radio buttons */
+.radio-group label {
+  display: flex;
+  align-items: center; /* Aligns the radio button and text */
+  font-size: 1rem;
+  color: white;
+  cursor: pointer; /* Pointer cursor on hover */
+  gap: 10px; /* Space between radio button and text */
+}
+
+/* Custom radio button */
+.radio-group input[type="radio"] {
+  -webkit-appearance: none; /* Removes default styling */
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background-color: #f0f0f0;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+/* Checked state */
+.radio-group input[type="radio"]:checked {
+  background-color: #284936; /* Green background when checked */
+}
+
+/* Hover effect */
+.radio-group input[type="radio"]:hover {
+  background-color: #284936;
+  border-color: white;
+}
+
+/* Focus effect */
+.radio-group input[type="radio"]:focus {
+  border-color: #3c6e50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Styling for the submit button */
+.button {
+  display: block;
+  width: 200px;
+  padding: 10px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #284936;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #3c6e50;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+}
