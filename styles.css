@@ -90,8 +90,10 @@ header div {
 .slide {
   vertical-align: middle;
   /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+  /*filter: blur(8px);*/
+  /*-webkit-filter: blur(8px);*/
 }
 
 /* Slideshow container */
